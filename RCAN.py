@@ -10,7 +10,7 @@ class CA_Block(nn.Module):
             nn.Sigmoid()
         )
     def forward(self,x):
-        x=x*se_module(x)
+        x=x*self.se_module(x)
         return x
     
 class RCAB_Block(nn.Module):
